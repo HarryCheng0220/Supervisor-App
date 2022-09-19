@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Login and Signup
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="raredog">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                    </div>
+                    <form id = "login" class="input-group">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span> Remember Password </span>
+                    <button type = "submit" class="submit-btn">Log In</button>
+                </form>
+                <form id = "register" class="input-group">
+                    <input type="text" class="input-field" placeholder="Username" required>
+                    <input type="email" class="input-field" placeholder="Email" required>
+                    <input type="text" class="input-field" placeholder="Password" required>
+                    <input type="checkbox" class="check-box"><span> I Agree to Terms and Conditions </span>
+                    <button type = "submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            var i = document.getElementById("login");
+            var j = document.getElementById("register");
+            var k = document.getElementById("btn")
+
+            function register(){
+                i.style.left = "-400px";
+                j.style.left = "50px";
+                k.style.left = "110px";
+            }
+
+            function login(){
+                i.style.left = "50px";
+                j.style.left = "450px";
+                k.style.left = "0px";
+            }
+        </script>
+    </body>
+
+</html>
