@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+<div class="raredog">
+<body>
+    <h2> Users List</h2>
+    <table style ="width:100%">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.position }}</td>
+            <td><a href="{{ url_for('views.edit_user', id=user.id) }}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</div>
