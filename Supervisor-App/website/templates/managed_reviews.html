@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+<div class="raredog">
+{% block content %}
+<div>
+    <h2> Managed Reviews </h2>
+</div>
+{% for review in reviews %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + review.author.image_file) }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ review.author.name }}</a>
+              <small class="text-muted">{{ review.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title">{{ review.title }}</a></h2>
+            <p class="article-content">{{ review.survey }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock%}
+</div>
